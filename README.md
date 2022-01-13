@@ -2,7 +2,7 @@
 
 Este tutorial explica como utilizar o software de trading cryptos. Suporta Windows, macOS e Linux.
 
-Este software é apenas para fins educacionais. USA O SOFTWARE POR SUA CONTA E RISCO!
+Este software é apenas para fins educacionais. USA O SOFTWARE POR TUA CONTA E RISCO!
 
 ## MacOS
 
