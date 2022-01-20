@@ -54,6 +54,8 @@ class RSI_SMA_Strategy(IStrategy):
 
     # Number of candles the strategy requires before producing valid signals
     startup_candle_count: int = 1
+    
+    use_custom_stoploss = True
 
     # Optional order type mapping.
     order_types = {
@@ -84,6 +86,13 @@ class RSI_SMA_Strategy(IStrategy):
             }
         }
     }
+    
+    def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
+                        current_rate: float, current_profit: float, **kwargs) -> float:
+
+        if current_profit > 0.20:
+            return (-0.00 + current_profit) # save 0.00 of profit
+        return 1
 
     def informative_pairs(self):
         """
